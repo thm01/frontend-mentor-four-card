@@ -1,0 +1,141 @@
+/*COLOR*/
+/*PRIMARY*/
+/*NEUTRAL*/
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fafafa;
+  color: #a3a5ae;
+  width: 375px;
+  margin: 0 auto;
+  font-weight: 200;
+}
+
+strong {
+  font-family: Poppins;
+  font-weight: 600;
+  color: #4c4e61;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4c4e61;
+}
+
+div.titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 10% 5%;
+}
+
+span.titre {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #4c4e61;
+}
+
+.cartes {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  /*Or grid */
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "vert" "milieu" "bleu";
+  z-index: 10;
+}
+
+.carte {
+  position: relative;
+  height: 250px;
+  width: 80%;
+  padding: 15px 30px;
+  margin: 15px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: #bdc9d64f 0px 10px 10px 4px;
+          box-shadow: #bdc9d64f 0px 10px 10px 4px;
+}
+
+.carte img {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+}
+
+.carte:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  /*CREDIT : https://github.com/Itchito */
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.rouge {
+  grid-area: rouge;
+  border-top: #ea5353 5px solid;
+}
+
+.vert {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: vert;
+  border-top: #45d3d3 5px solid;
+}
+
+.jaune {
+  grid-area: jaune;
+  border-top: #fcaf4a 5px solid;
+}
+
+.bleu {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: bleu;
+  border-top: #549ef2 5px solid;
+}
+
+.milieu {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: milieu;
+}
+
+@media screen and (min-width: 376px) {
+  div.titre {
+    width: 39%;
+    margin: 5% auto;
+  }
+  span.titre {
+    font-size: 2rem;
+  }
+  .cartes {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "vert milieu bleu";
+    margin: 0 auto;
+  }
+  body {
+    width: 1440px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
